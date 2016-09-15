@@ -19,28 +19,32 @@ public class GameRunner
 		}
 	public static void main(String[] args)
 		{		
-		System.out.println("Welcome to battleship. Prepare for the game of a lifetime!");
+//		System.out.println("Welcome to battleship. Prepare for the game of a lifetime!");
 		// TEAM NAME
 //		Scanner team = new Scanner(System.in);
 //		System.out.println("What would you like your team name to be?");
 //		String teamName = team.nextLine();
 //		System.out.println("It's game time, " + teamName + "!");
-		delay();
-		System.out.println("");
-		System.out.println("First, you must place your ships. This is what the game board looks like: ");
+//		delay();
+//		System.out.println("");
+		System.out.println("This is what the game board looks like: ");
 		System.out.println("");
 		GameBoard.display();
 		delay();
+		GameBoard.enemy1();
+		//FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
+//		System.out.println("");
+//		System.out.println("The enemy has four boats. The carrier takes up four spaces. The cruiser and fighter each take up three spaces, and the scout takes up two.");
+		
 		System.out.println("");
-		System.out.println("You have five boats. The carrier takes up five spaces. The battleship takes up four. The crusier and submarine take up three. The destroyer takes up two.");
-		Scanner player = new Scanner(System.in);
-		System.out.println("");
-		System.out.println("Please enter the spaces for the carrier first");
-//		String shipSpace = player.nextLine();
-//		for(int i = 0; i < 5; i++)
-//			{
-			String shipSpace = player.nextLine();
-			switch(shipSpace.substring(0, 1))
+		System.out.println("Let's play. Please start guessing");
+		boolean playing = true;
+		while(playing)
+			{
+			Scanner userGuess = new Scanner(System.in);
+	//		String cruiser = boat1.nextLine();
+			String hitMiss = userGuess.nextLine();
+			switch(hitMiss.substring(0, 1))
 				{
 				case "A":
 				case "a":
@@ -103,29 +107,25 @@ public class GameRunner
 					break;
 					}
 				}
-			column = Integer.parseInt(shipSpace.substring(1)) - 1;
-			for(int row = 0; row < board.length; row++)
+			column = Integer.parseInt(hitMiss.substring(1)) - 1;
+			if(board[row][column].equals("x"))
 				{
-				for(int col = 0; col < board.length; col++)
-					{
-					board[row][col] = "x";
-					}
+				System.out.println("HIT!");
+				System.out.println("");
+				GameBoard.enemy1();
 				}
-//			}
-
-//		for(int row = 0; row < battleshipBoard.length; row++)
-//			{
-//			for(int col = 0; col < battleshipBoard.length; col++)
-//				{
-//				battleshipBoard[row][col] = "cat";
-//				}
-//			}
-//		System.out.println(board);
+			else
+				{
+				System.out.println("Miss :(");
+				System.out.println("");
+				GameBoard.enemy1();
+				}					
+			}
 		}
 	}
+	
 
-// Use a nested for loop to put a blank space in each box of array. Separate method
-
+// Why can't I play if enemy1 is not given to the user?
 
 
 
