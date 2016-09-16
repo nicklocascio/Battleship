@@ -29,32 +29,44 @@ public class GameBoard
 			{
 			for(int col = 0; col < 10; col++)
 				{
-				GameRunner.board[row][col] = "_";
+				GameRunner.board[row][col] = " ";
 				}
 			}
 		// Carrier
-		GameRunner.board[2][6]="x";
-		GameRunner.board[3][6]="x";
-		GameRunner.board[4][6]="x";
-		GameRunner.board[5][6]="x";
+		String carrierFirst = GameRunner.board[2][6]="x";
+		String carrierSecond = GameRunner.board[3][6]="x";
+		String carrierThird = GameRunner.board[4][6]="x";
+		String carrierFourth = GameRunner.board[5][6]="x";
 		
 		// Cruiser
-		GameRunner.board[0][1]="x";
-		GameRunner.board[0][2]="x";
-		GameRunner.board[0][3]="x";
+		String cruiserFirst = GameRunner.board[0][1]="x";
+		String cruiserSecond = GameRunner.board[0][2]="x";
+		String cruiserThird = GameRunner.board[0][3]="x";
 		
 		// Fighter
-		GameRunner.board[4][2]="x";
-		GameRunner.board[5][2]="x";
-		GameRunner.board[6][2]="x";
+		String fighterFirst = GameRunner.board[4][2]="x";
+		String fighterSecond = GameRunner.board[5][2]="x";
+		String fighterThird = GameRunner.board[6][2]="x";
 		
 		// Scout 
-		GameRunner.board[8][8]="x";
-		GameRunner.board[8][9]="x";
+		String scoutFirst = GameRunner.board[8][8]="x";
+		String scoutSecond = GameRunner.board[8][9]="x";
 		
-		if(GameRunner.board[GameRunner.row][GameRunner.column].equals("x"))
+		if(GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutFirst) || 
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFourth)
+				)
 			{
-			GameRunner.board[GameRunner.row][GameRunner.column] = "x";
+			GameRunner.board[GameRunner.row][GameRunner.column] = "";
 			}
 		else
 			{
