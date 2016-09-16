@@ -52,6 +52,15 @@ public class GameBoard
 		GameRunner.board[8][8]="x";
 		GameRunner.board[8][9]="x";
 		
+		if(GameRunner.board[GameRunner.row][GameRunner.column].equals("x"))
+			{
+			GameRunner.board[GameRunner.row][GameRunner.column] = "x";
+			}
+		else
+			{
+			GameRunner.board[GameRunner.row][GameRunner.column] = "o";
+			}
+		
 		System.out.println("     1     2     3     4     5     6     7     8     9     10  ");
 		System.out.println("   _____ _____ _____ _____ _____ _____ _____ _____ _____ _____");
 		System.out.println("A |__"+GameRunner.board[0][0]+"__|__"+GameRunner.board[0][1]+"__|__"+GameRunner.board[0][2]+"__|__"+GameRunner.board[0][3]+"__|__"+GameRunner.board[0][4]+"__|__"+GameRunner.board[0][5]+"__|__"+GameRunner.board[0][6]+"__|__"+GameRunner.board[0][7]+"__|__"+GameRunner.board[0][8]+"__|__"+GameRunner.board[0][9]+"__|");

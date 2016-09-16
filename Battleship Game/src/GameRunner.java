@@ -27,12 +27,12 @@ public class GameRunner
 //		System.out.println("It's game time, " + teamName + "!");
 //		delay();
 //		System.out.println("");
-		System.out.println("This is what the game board looks like: ");
-		System.out.println("");
-		GameBoard.display();
-		delay();
+//		System.out.println("This is what the game board looks like: ");
+//		System.out.println("");
+//		GameBoard.display();
+//		delay();
+		// FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
 		GameBoard.enemy1();
-		//FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
 //		System.out.println("");
 //		System.out.println("The enemy has four boats. The carrier takes up four spaces. The cruiser and fighter each take up three spaces, and the scout takes up two.");
 		
