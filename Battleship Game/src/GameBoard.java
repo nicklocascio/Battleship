@@ -33,24 +33,24 @@ public class GameBoard
 				}
 			}
 		// Carrier
-		String carrierFirst = GameRunner.board[2][6]="x";
-		String carrierSecond = GameRunner.board[3][6]="x";
-		String carrierThird = GameRunner.board[4][6]="x";
-		String carrierFourth = GameRunner.board[5][6]="x";
+		String carrierFirst = GameRunner.board[2][6];
+		String carrierSecond = GameRunner.board[3][6];
+		String carrierThird = GameRunner.board[4][6];
+		String carrierFourth = GameRunner.board[5][6];
 		
 		// Cruiser
-		String cruiserFirst = GameRunner.board[0][1]="x";
-		String cruiserSecond = GameRunner.board[0][2]="x";
-		String cruiserThird = GameRunner.board[0][3]="x";
+		String cruiserFirst = GameRunner.board[0][1];
+		String cruiserSecond = GameRunner.board[0][2];
+		String cruiserThird = GameRunner.board[0][3];
 		
 		// Fighter
-		String fighterFirst = GameRunner.board[4][2]="x";
-		String fighterSecond = GameRunner.board[5][2]="x";
-		String fighterThird = GameRunner.board[6][2]="x";
+		String fighterFirst = GameRunner.board[4][2];
+		String fighterSecond = GameRunner.board[5][2];
+		String fighterThird = GameRunner.board[6][2];
 		
 		// Scout 
-		String scoutFirst = GameRunner.board[8][8]="x";
-		String scoutSecond = GameRunner.board[8][9]="x";
+		String scoutFirst = GameRunner.board[8][8];
+		String scoutSecond = GameRunner.board[8][9];
 		
 		if(GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutFirst) || 
 			GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutSecond) ||
@@ -66,7 +66,8 @@ public class GameBoard
 			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFourth)
 				)
 			{
-			GameRunner.board[GameRunner.row][GameRunner.column] = "";
+			GameRunner.board[GameRunner.row][GameRunner.column] = "x";
+			System.out.println("Hit!");
 			}
 		else
 			{

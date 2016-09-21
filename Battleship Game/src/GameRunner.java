@@ -110,13 +110,11 @@ public class GameRunner
 			column = Integer.parseInt(hitMiss.substring(1)) - 1;
 			if(board[row][column].equals("x"))
 				{
-				System.out.println("HIT!");
 				System.out.println("");
 				GameBoard.enemy1();
 				}
 			else
 				{
-				System.out.println("Miss :(");
 				System.out.println("");
 				GameBoard.enemy1();
 				}					
