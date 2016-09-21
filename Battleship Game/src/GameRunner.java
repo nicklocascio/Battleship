@@ -32,6 +32,7 @@ public class GameRunner
 //		GameBoard.display();
 //		delay();
 		// FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
+		GameBoard.fillArray();
 		GameBoard.enemy1();
 //		System.out.println("");
 //		System.out.println("The enemy has four boats. The carrier takes up four spaces. The cruiser and fighter each take up three spaces, and the scout takes up two.");
