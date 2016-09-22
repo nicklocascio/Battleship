@@ -31,9 +31,8 @@ public class GameRunner
 //		System.out.println("");
 //		GameBoard.display();
 //		delay();
-		// FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
 		GameBoard.fillArray();
-		GameBoard.enemy1();
+		GameBoard.playing();
 //		System.out.println("");
 //		System.out.println("The enemy has four boats. The carrier takes up four spaces. The cruiser and fighter each take up three spaces, and the scout takes up two.");
 		
@@ -112,12 +111,12 @@ public class GameRunner
 			if(board[row][column].equals("x"))
 				{
 				System.out.println("");
-				GameBoard.enemy1();
+				GameBoard.playing();
 				}
 			else
 				{
 				System.out.println("");
-				GameBoard.enemy1();
+				GameBoard.playing();
 				}					
 			}
 		}

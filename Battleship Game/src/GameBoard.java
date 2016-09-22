@@ -2,6 +2,26 @@ import java.util.Arrays;
 
 public class GameBoard
 	{
+	// Carrier
+	static String carrierFirst = GameRunner.board[2][6] = "x";
+	static String carrierSecond = GameRunner.board[3][6] = "x";
+	static String carrierThird = GameRunner.board[4][6] = "x";
+	static String carrierFourth = GameRunner.board[5][6] = "x";
+	
+	// Cruiser
+	static String cruiserFirst = GameRunner.board[0][1] = "x";
+	static String cruiserSecond = GameRunner.board[0][2] = "x";
+	static String cruiserThird = GameRunner.board[0][3] = "x";
+	
+	// Fighter
+	static String fighterFirst = GameRunner.board[4][2] = "x";
+	static String fighterSecond = GameRunner.board[5][2] = "x";
+	static String fighterThird = GameRunner.board[6][2] = "x";
+	
+	// Scout 
+	static String scoutFirst = GameRunner.board[8][8] = "x";
+	static String scoutSecond = GameRunner.board[8][9] = "x";
+	
 	public static void display()
 		{		
 		for(int row = 0; row < 10; row++)
@@ -16,7 +36,7 @@ public class GameBoard
 		public static void fillArray(){
 			
 			 for (int i = 0; i < GameRunner.board.length; i++){
-			        Arrays.fill(GameRunner.board[i], " ");
+			        Arrays.fill(GameRunner.board[i], "_");
 			    }
 //		System.out.println("     1     2     3     4     5     6     7     8     9     10  ");
 //		System.out.println("   _____ _____ _____ _____ _____ _____ _____ _____ _____ _____");
@@ -31,48 +51,37 @@ public class GameBoard
 //		System.out.println("I |__"+GameRunner.board[8][0]+"__|__"+GameRunner.board[8][1]+"__|__"+GameRunner.board[8][2]+"__|__"+GameRunner.board[8][3]+"__|__"+GameRunner.board[8][4]+"__|__"+GameRunner.board[8][5]+"__|__"+GameRunner.board[8][6]+"__|__"+GameRunner.board[8][7]+"__|__"+GameRunner.board[8][8]+"__|__"+GameRunner.board[8][9]+"__|");
 //		System.out.println("J |__"+GameRunner.board[9][0]+"__|__"+GameRunner.board[9][1]+"__|__"+GameRunner.board[9][2]+"__|__"+GameRunner.board[9][3]+"__|__"+GameRunner.board[9][4]+"__|__"+GameRunner.board[9][5]+"__|__"+GameRunner.board[9][6]+"__|__"+GameRunner.board[9][7]+"__|__"+GameRunner.board[9][8]+"__|__"+GameRunner.board[9][9]+"__|");
 		}
-	public static void enemy1()
-		{		
+//	public static void enemy1()
+//		{		
 		// Carrier
-		String carrierFirst = GameRunner.board[2][6];
-		String carrierSecond = GameRunner.board[3][6];
-		String carrierThird = GameRunner.board[4][6];
-		String carrierFourth = GameRunner.board[5][6];
+//		String carrierFirst = GameRunner.board[2][6] = "x";
+//		String carrierSecond = GameRunner.board[3][6] = "x";
+//		String carrierThird = GameRunner.board[4][6] = "x";
+//		String carrierFourth = GameRunner.board[5][6] = "x";
 		
 		// Cruiser
-		String cruiserFirst = GameRunner.board[0][1];
-		String cruiserSecond = GameRunner.board[0][2];
-		String cruiserThird = GameRunner.board[0][3];
+//		String cruiserFirst = GameRunner.board[0][1] = "x";
+//		String cruiserSecond = GameRunner.board[0][2] = "x";
+//		String cruiserThird = GameRunner.board[0][3] = "x";
 		
 		// Fighter
-		String fighterFirst = GameRunner.board[4][2];
-		String fighterSecond = GameRunner.board[5][2];
-		String fighterThird = GameRunner.board[6][2];
-		
+//		String fighterFirst = GameRunner.board[4][2] = "x";
+//		String fighterSecond = GameRunner.board[5][2] = "x";
+//		String fighterThird = GameRunner.board[6][2] = "x";
+	
 		// Scout 
-		String scoutFirst = GameRunner.board[8][8];
-		String scoutSecond = GameRunner.board[8][9];
+//		String scoutFirst = GameRunner.board[8][8] = "x";
+//		String scoutSecond = GameRunner.board[8][9] = "x";
 		
-		if(GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutFirst) || 
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutSecond) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterFirst) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterSecond) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterThird) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserFirst) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserSecond) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserThird) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFirst) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierSecond) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierThird) ||
-			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFourth)
-				)
+	public static void playing()
+		{
+		if(GameRunner.board[GameRunner.row][GameRunner.column].equals("x"))
 			{
-			GameRunner.board[GameRunner.row][GameRunner.column] = "x";
-			GameRunner.board[0][0] ="o";
+			GameRunner.board[GameRunner.row][GameRunner.column] = "h";
 			}
-		else
+		else if(GameRunner.board[GameRunner.row][GameRunner.column].equals("_"))
 			{
-			GameRunner.board[GameRunner.row][GameRunner.column] = "o";
+			GameRunner.board[GameRunner.row][GameRunner.column] = "m";
 			}
 		
 		System.out.println("     1     2     3     4     5     6     7     8     9     10  ");
