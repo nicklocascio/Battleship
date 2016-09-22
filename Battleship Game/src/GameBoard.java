@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class GameBoard
 	{
@@ -10,51 +11,64 @@ public class GameBoard
 				GameRunner.board[row][col] = "_";
 				}
 			}
-		System.out.println("     1     2     3     4     5     6     7     8     9     10  ");
-		System.out.println("   _____ _____ _____ _____ _____ _____ _____ _____ _____ _____");
-		System.out.println("A |__"+GameRunner.board[0][0]+"__|__"+GameRunner.board[0][1]+"__|__"+GameRunner.board[0][2]+"__|__"+GameRunner.board[0][3]+"__|__"+GameRunner.board[0][4]+"__|__"+GameRunner.board[0][5]+"__|__"+GameRunner.board[0][6]+"__|__"+GameRunner.board[0][7]+"__|__"+GameRunner.board[0][8]+"__|__"+GameRunner.board[0][9]+"__|");
-		System.out.println("B |__"+GameRunner.board[1][0]+"__|__"+GameRunner.board[1][1]+"__|__"+GameRunner.board[1][2]+"__|__"+GameRunner.board[1][3]+"__|__"+GameRunner.board[1][4]+"__|__"+GameRunner.board[1][5]+"__|__"+GameRunner.board[1][6]+"__|__"+GameRunner.board[1][7]+"__|__"+GameRunner.board[1][8]+"__|__"+GameRunner.board[1][9]+"__|");
-		System.out.println("C |__"+GameRunner.board[2][0]+"__|__"+GameRunner.board[2][1]+"__|__"+GameRunner.board[2][2]+"__|__"+GameRunner.board[2][3]+"__|__"+GameRunner.board[2][4]+"__|__"+GameRunner.board[2][5]+"__|__"+GameRunner.board[2][6]+"__|__"+GameRunner.board[2][7]+"__|__"+GameRunner.board[2][8]+"__|__"+GameRunner.board[2][9]+"__|");
-		System.out.println("D |__"+GameRunner.board[3][0]+"__|__"+GameRunner.board[3][1]+"__|__"+GameRunner.board[3][2]+"__|__"+GameRunner.board[3][3]+"__|__"+GameRunner.board[3][4]+"__|__"+GameRunner.board[3][5]+"__|__"+GameRunner.board[3][6]+"__|__"+GameRunner.board[3][7]+"__|__"+GameRunner.board[3][8]+"__|__"+GameRunner.board[3][9]+"__|");
-		System.out.println("E |__"+GameRunner.board[4][0]+"__|__"+GameRunner.board[4][1]+"__|__"+GameRunner.board[4][2]+"__|__"+GameRunner.board[4][3]+"__|__"+GameRunner.board[4][4]+"__|__"+GameRunner.board[4][5]+"__|__"+GameRunner.board[4][6]+"__|__"+GameRunner.board[4][7]+"__|__"+GameRunner.board[4][8]+"__|__"+GameRunner.board[4][9]+"__|");
-		System.out.println("F |__"+GameRunner.board[5][0]+"__|__"+GameRunner.board[5][1]+"__|__"+GameRunner.board[5][2]+"__|__"+GameRunner.board[5][3]+"__|__"+GameRunner.board[5][4]+"__|__"+GameRunner.board[5][5]+"__|__"+GameRunner.board[5][6]+"__|__"+GameRunner.board[5][7]+"__|__"+GameRunner.board[5][8]+"__|__"+GameRunner.board[5][9]+"__|");
-		System.out.println("G |__"+GameRunner.board[6][0]+"__|__"+GameRunner.board[6][1]+"__|__"+GameRunner.board[6][2]+"__|__"+GameRunner.board[6][3]+"__|__"+GameRunner.board[6][4]+"__|__"+GameRunner.board[6][5]+"__|__"+GameRunner.board[6][6]+"__|__"+GameRunner.board[6][7]+"__|__"+GameRunner.board[6][8]+"__|__"+GameRunner.board[6][9]+"__|");
-		System.out.println("H |__"+GameRunner.board[7][0]+"__|__"+GameRunner.board[7][1]+"__|__"+GameRunner.board[7][2]+"__|__"+GameRunner.board[7][3]+"__|__"+GameRunner.board[7][4]+"__|__"+GameRunner.board[7][5]+"__|__"+GameRunner.board[7][6]+"__|__"+GameRunner.board[7][7]+"__|__"+GameRunner.board[7][8]+"__|__"+GameRunner.board[7][9]+"__|");
-		System.out.println("I |__"+GameRunner.board[8][0]+"__|__"+GameRunner.board[8][1]+"__|__"+GameRunner.board[8][2]+"__|__"+GameRunner.board[8][3]+"__|__"+GameRunner.board[8][4]+"__|__"+GameRunner.board[8][5]+"__|__"+GameRunner.board[8][6]+"__|__"+GameRunner.board[8][7]+"__|__"+GameRunner.board[8][8]+"__|__"+GameRunner.board[8][9]+"__|");
-		System.out.println("J |__"+GameRunner.board[9][0]+"__|__"+GameRunner.board[9][1]+"__|__"+GameRunner.board[9][2]+"__|__"+GameRunner.board[9][3]+"__|__"+GameRunner.board[9][4]+"__|__"+GameRunner.board[9][5]+"__|__"+GameRunner.board[9][6]+"__|__"+GameRunner.board[9][7]+"__|__"+GameRunner.board[9][8]+"__|__"+GameRunner.board[9][9]+"__|");
+		}
+
+		public static void fillArray(){
+			
+			 for (int i = 0; i < GameRunner.board.length; i++){
+			        Arrays.fill(GameRunner.board[i], " ");
+			    }
+//		System.out.println("     1     2     3     4     5     6     7     8     9     10  ");
+//		System.out.println("   _____ _____ _____ _____ _____ _____ _____ _____ _____ _____");
+//		System.out.println("A |__"+GameRunner.board[0][0]+"__|__"+GameRunner.board[0][1]+"__|__"+GameRunner.board[0][2]+"__|__"+GameRunner.board[0][3]+"__|__"+GameRunner.board[0][4]+"__|__"+GameRunner.board[0][5]+"__|__"+GameRunner.board[0][6]+"__|__"+GameRunner.board[0][7]+"__|__"+GameRunner.board[0][8]+"__|__"+GameRunner.board[0][9]+"__|");
+//		System.out.println("B |__"+GameRunner.board[1][0]+"__|__"+GameRunner.board[1][1]+"__|__"+GameRunner.board[1][2]+"__|__"+GameRunner.board[1][3]+"__|__"+GameRunner.board[1][4]+"__|__"+GameRunner.board[1][5]+"__|__"+GameRunner.board[1][6]+"__|__"+GameRunner.board[1][7]+"__|__"+GameRunner.board[1][8]+"__|__"+GameRunner.board[1][9]+"__|");
+//		System.out.println("C |__"+GameRunner.board[2][0]+"__|__"+GameRunner.board[2][1]+"__|__"+GameRunner.board[2][2]+"__|__"+GameRunner.board[2][3]+"__|__"+GameRunner.board[2][4]+"__|__"+GameRunner.board[2][5]+"__|__"+GameRunner.board[2][6]+"__|__"+GameRunner.board[2][7]+"__|__"+GameRunner.board[2][8]+"__|__"+GameRunner.board[2][9]+"__|");
+//		System.out.println("D |__"+GameRunner.board[3][0]+"__|__"+GameRunner.board[3][1]+"__|__"+GameRunner.board[3][2]+"__|__"+GameRunner.board[3][3]+"__|__"+GameRunner.board[3][4]+"__|__"+GameRunner.board[3][5]+"__|__"+GameRunner.board[3][6]+"__|__"+GameRunner.board[3][7]+"__|__"+GameRunner.board[3][8]+"__|__"+GameRunner.board[3][9]+"__|");
+//		System.out.println("E |__"+GameRunner.board[4][0]+"__|__"+GameRunner.board[4][1]+"__|__"+GameRunner.board[4][2]+"__|__"+GameRunner.board[4][3]+"__|__"+GameRunner.board[4][4]+"__|__"+GameRunner.board[4][5]+"__|__"+GameRunner.board[4][6]+"__|__"+GameRunner.board[4][7]+"__|__"+GameRunner.board[4][8]+"__|__"+GameRunner.board[4][9]+"__|");
+//		System.out.println("F |__"+GameRunner.board[5][0]+"__|__"+GameRunner.board[5][1]+"__|__"+GameRunner.board[5][2]+"__|__"+GameRunner.board[5][3]+"__|__"+GameRunner.board[5][4]+"__|__"+GameRunner.board[5][5]+"__|__"+GameRunner.board[5][6]+"__|__"+GameRunner.board[5][7]+"__|__"+GameRunner.board[5][8]+"__|__"+GameRunner.board[5][9]+"__|");
+//		System.out.println("G |__"+GameRunner.board[6][0]+"__|__"+GameRunner.board[6][1]+"__|__"+GameRunner.board[6][2]+"__|__"+GameRunner.board[6][3]+"__|__"+GameRunner.board[6][4]+"__|__"+GameRunner.board[6][5]+"__|__"+GameRunner.board[6][6]+"__|__"+GameRunner.board[6][7]+"__|__"+GameRunner.board[6][8]+"__|__"+GameRunner.board[6][9]+"__|");
+//		System.out.println("H |__"+GameRunner.board[7][0]+"__|__"+GameRunner.board[7][1]+"__|__"+GameRunner.board[7][2]+"__|__"+GameRunner.board[7][3]+"__|__"+GameRunner.board[7][4]+"__|__"+GameRunner.board[7][5]+"__|__"+GameRunner.board[7][6]+"__|__"+GameRunner.board[7][7]+"__|__"+GameRunner.board[7][8]+"__|__"+GameRunner.board[7][9]+"__|");
+//		System.out.println("I |__"+GameRunner.board[8][0]+"__|__"+GameRunner.board[8][1]+"__|__"+GameRunner.board[8][2]+"__|__"+GameRunner.board[8][3]+"__|__"+GameRunner.board[8][4]+"__|__"+GameRunner.board[8][5]+"__|__"+GameRunner.board[8][6]+"__|__"+GameRunner.board[8][7]+"__|__"+GameRunner.board[8][8]+"__|__"+GameRunner.board[8][9]+"__|");
+//		System.out.println("J |__"+GameRunner.board[9][0]+"__|__"+GameRunner.board[9][1]+"__|__"+GameRunner.board[9][2]+"__|__"+GameRunner.board[9][3]+"__|__"+GameRunner.board[9][4]+"__|__"+GameRunner.board[9][5]+"__|__"+GameRunner.board[9][6]+"__|__"+GameRunner.board[9][7]+"__|__"+GameRunner.board[9][8]+"__|__"+GameRunner.board[9][9]+"__|");
 		}
 	public static void enemy1()
 		{		
-		for(int row = 0; row < 10; row++)
-			{
-			for(int col = 0; col < 10; col++)
-				{
-				GameRunner.board[row][col] = "_";
-				}
-			}
 		// Carrier
-		GameRunner.board[2][6]="x";
-		GameRunner.board[3][6]="x";
-		GameRunner.board[4][6]="x";
-		GameRunner.board[5][6]="x";
+		String carrierFirst = GameRunner.board[2][6];
+		String carrierSecond = GameRunner.board[3][6];
+		String carrierThird = GameRunner.board[4][6];
+		String carrierFourth = GameRunner.board[5][6];
 		
 		// Cruiser
-		GameRunner.board[0][1]="x";
-		GameRunner.board[0][2]="x";
-		GameRunner.board[0][3]="x";
+		String cruiserFirst = GameRunner.board[0][1];
+		String cruiserSecond = GameRunner.board[0][2];
+		String cruiserThird = GameRunner.board[0][3];
 		
 		// Fighter
-		GameRunner.board[4][2]="x";
-		GameRunner.board[5][2]="x";
-		GameRunner.board[6][2]="x";
+		String fighterFirst = GameRunner.board[4][2];
+		String fighterSecond = GameRunner.board[5][2];
+		String fighterThird = GameRunner.board[6][2];
 		
 		// Scout 
-		GameRunner.board[8][8]="x";
-		GameRunner.board[8][9]="x";
+		String scoutFirst = GameRunner.board[8][8];
+		String scoutSecond = GameRunner.board[8][9];
 		
-		if(GameRunner.board[GameRunner.row][GameRunner.column].equals("x"))
+		if(GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutFirst) || 
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(scoutSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(fighterThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(cruiserThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFirst) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierSecond) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierThird) ||
+			GameRunner.board[GameRunner.row][GameRunner.column].equals(carrierFourth)
+				)
 			{
 			GameRunner.board[GameRunner.row][GameRunner.column] = "x";
+			GameRunner.board[0][0] ="o";
 			}
 		else
 			{

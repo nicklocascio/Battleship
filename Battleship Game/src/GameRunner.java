@@ -32,6 +32,7 @@ public class GameRunner
 //		GameBoard.display();
 //		delay();
 		// FLIPPIN FIND OUT HOW TO NOT PRINT THIS OUT
+		GameBoard.fillArray();
 		GameBoard.enemy1();
 //		System.out.println("");
 //		System.out.println("The enemy has four boats. The carrier takes up four spaces. The cruiser and fighter each take up three spaces, and the scout takes up two.");
@@ -110,13 +111,11 @@ public class GameRunner
 			column = Integer.parseInt(hitMiss.substring(1)) - 1;
 			if(board[row][column].equals("x"))
 				{
-				System.out.println("HIT!");
 				System.out.println("");
 				GameBoard.enemy1();
 				}
 			else
 				{
-				System.out.println("Miss :(");
 				System.out.println("");
 				GameBoard.enemy1();
 				}					
